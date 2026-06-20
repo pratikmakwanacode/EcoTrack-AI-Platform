@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-light: #f4fbf7;
+  --color-brand-emerald: #059669;
+  --color-brand-mint: #10b981;
+  --color-brand-mint-light: #d1fae5;
+  --color-brand-dark: #064e3b;
+}
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --background: #020617; /* bg-slate-950 */
+  --foreground: #f8fafc; /* text-slate-50 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scope dark foreground to dashboard only — prevents cascading into #eco-login-root */
+.eco-dashboard-layout {
+  color: var(--foreground);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(240, 253, 250, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.04);
+}
+
+/* Micro-animations */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.95; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: float 4s infinite ease-in-out;
+}
+
+/* Custom input style */
+.eco-input {
+  transition: all 0.2s ease-in-out;
+}
+.eco-input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* Custom transitions */
+.transition-card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.transition-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(5, 150, 105, 0.15);
+}
+
+/* Toast Animations */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.2s ease-out forwards;
+}
+
+/* Pulsing Eco-Gradient Background */
+.eco-bg-animate {
+  background: linear-gradient(-45deg, #022c22, #0f172a, #064e3b, #030712);
+  background-size: 400% 400%;
+  animation: ecoGradientAnimation 20s ease infinite;
+}
+
+@keyframes ecoGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism 3D Card Utility */
+.glass-3d-card {
+  background: rgba(8, 15, 30, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.20);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.05);
+  transform-style: preserve-3d;
+  transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+}
+
+.glass-3d-card:hover {
+  border-color: rgba(16, 185, 129, 0.40);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+}
+
+
+/* Parallax 3D Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+/* Float active badges in space */
+@keyframes float-badge {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-float-badge {
+  animation: float-badge 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideOutFade {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-50px);
+  }
+}
+
+.animate-slide-out-fade {
+  animation: slideOutFade 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+

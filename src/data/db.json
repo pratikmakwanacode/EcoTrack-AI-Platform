@@ -1,0 +1,127 @@
+{
+  "userProfile": {
+    "hasCalculated": true,
+    "electricity": 250,
+    "gas": 30,
+    "carKm": 900,
+    "flights": 5,
+    "diet": "Non-Vegetarian",
+    "originalScore": 10538,
+    "carbonScore": 9908,
+    "points": 230,
+    "completedChallenges": [
+      "unplug-vampire",
+      "public-transit",
+      "meatless-monday",
+      "lower-thermostat"
+    ]
+  },
+  "leaderboard": [
+    {
+      "name": "Elena Rostova",
+      "points": 450,
+      "carbonScore": 2100,
+      "rank": 1,
+      "isCurrentUser": false,
+      "badge": "Eco Champion"
+    },
+    {
+      "name": "Marcus Vance",
+      "points": 380,
+      "carbonScore": 3200,
+      "rank": 2,
+      "isCurrentUser": false,
+      "badge": "Green Advocate"
+    },
+    {
+      "name": "Sarah Chen",
+      "points": 320,
+      "carbonScore": 1800,
+      "rank": 3,
+      "isCurrentUser": false,
+      "badge": "Carbon Cutter"
+    },
+    {
+      "name": "David Kim",
+      "points": 240,
+      "carbonScore": 4100,
+      "rank": 4,
+      "isCurrentUser": false,
+      "badge": "Waste Reducer"
+    },
+    {
+      "name": "You (Eco Warrior)",
+      "points": 230,
+      "carbonScore": 9908,
+      "rank": 5,
+      "isCurrentUser": true,
+      "badge": "Green Advocate"
+    },
+    {
+      "name": "Amina Diop",
+      "points": 190,
+      "carbonScore": 2800,
+      "rank": 6,
+      "isCurrentUser": false,
+      "badge": "Conscious Citizen"
+    },
+    {
+      "name": "Liam O'Connor",
+      "points": 150,
+      "carbonScore": 3500,
+      "rank": 7,
+      "isCurrentUser": false,
+      "badge": "Starter"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "unplug-vampire",
+      "title": "Unplug Vampire Electronics",
+      "description": "Unplug appliances and chargers when not in use to eliminate phantom power draw.",
+      "points": 50,
+      "carbonReduction": 120,
+      "category": "Housing"
+    },
+    {
+      "id": "public-transit",
+      "title": "Switch Commutes to Transit",
+      "description": "Replace at least two weekly car trips with public transit, walking, or biking.",
+      "points": 80,
+      "carbonReduction": 240,
+      "category": "Travel"
+    },
+    {
+      "id": "meatless-monday",
+      "title": "Adopt Meatless Days",
+      "description": "Go vegetarian or vegan for at least two days a week to lower food emissions.",
+      "points": 60,
+      "carbonReduction": 180,
+      "category": "Lifestyle"
+    },
+    {
+      "id": "lower-thermostat",
+      "title": "Optimize Home Temperature",
+      "description": "Lower thermostat by 1-2°C in winter or raise it in summer.",
+      "points": 40,
+      "carbonReduction": 90,
+      "category": "Housing"
+    },
+    {
+      "id": "bike-commute",
+      "title": "Pedal Power",
+      "description": "Use a bicycle or walk for all short trips under 5 kilometers.",
+      "points": 70,
+      "carbonReduction": 150,
+      "category": "Travel"
+    },
+    {
+      "id": "led-bulbs",
+      "title": "Switch to LED Bulbs",
+      "description": "Replace your home's 5 most used incandescent bulbs with energy-efficient LEDs.",
+      "points": 50,
+      "carbonReduction": 110,
+      "category": "Housing"
+    }
+  ]
+}
