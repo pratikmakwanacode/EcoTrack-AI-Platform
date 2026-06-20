@@ -254,7 +254,7 @@ if not st.session_state.logged_in:
                             'completed_challenges': [],
                             'logs': []
                         }
-                    st.toast(f"Authenticated successfully as {email_clean}", icon="✓")
+                    st.toast(f"Authenticated successfully as {email_clean}", icon="✅")
                     st.rerun()
                     
         st.markdown("""
